@@ -5,7 +5,7 @@ const Button = ({type, text, context, clickHandler}) => {
     const renderButton = () => {
         switch(type){
             case 'submit':
-                return <button type="submit" className={`prim-button ${context ? 'prim-button--' + context : ''}`}>{text}</button>
+                return <button type="submit" className={`prim-button ${context ? 'prim-button--' + context : 'Save'}`}>{text}</button>
             default:
                 return <div onClick={clickHandler} className={`prim-button`}>{text}</div>
         }
