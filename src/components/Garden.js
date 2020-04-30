@@ -31,7 +31,6 @@ export function togglemenu4(){
  }
 /*Menu*/
 
-
 /*drag and drop*/
 var drop = "node2"
 $(function() {

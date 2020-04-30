@@ -2292,12 +2292,22 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 .botão_direita{
   height: 100px;
   width: 200px;
-  background-color: red;
+  background-color: transparent;
   position: absolute;
   left: 80%;
   top: 80%;
 }
 
+.save_button {
+  padding: 10px;
+  padding-left: 30%;
+  width: 200px;
+  height: 100px;
+}
+
+.save_text {
+  font-size: 27px;
+}
 /* POP-UP*/
 .pop-up-container{
   width: 100%;

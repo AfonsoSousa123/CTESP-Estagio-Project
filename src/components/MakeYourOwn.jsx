@@ -4,6 +4,7 @@ import { albums } from '../data/albums';
 import * as make from'./makeyo';
 import './makeyo';
 import { bar_type } from './mikrosjs';
+import Button from '@material-ui/core/Button';
 
 
 const MakeYourOwn = () => {
@@ -194,10 +195,17 @@ const MakeYourOwn = () => {
           </div>
         </div>
         <div className="botão_direita">
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            className="save_button"
+          >
+            <div className="save_text">Save</div> 
+          </Button>
         </div>
       </div>
     </div>
-
     );
 }
 
