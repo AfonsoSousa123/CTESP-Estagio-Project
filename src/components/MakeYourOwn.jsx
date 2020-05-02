@@ -5,10 +5,23 @@ import * as make from'./makeyo';
 import './makeyo';
 import { bar_type } from './mikrosjs';
 import Button from '@material-ui/core/Button';
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import { createMuiTheme } from '@material-ui/core/styles';
+import red from '@material-ui/core/colors/red';
 
+
+const theme = createMuiTheme({
+  palette: {
+    primary: red,
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
 
 const MakeYourOwn = () => {
     return (
+      <MuiThemeProvider>
       <div>
       <meta charSet="utf-8" />
       <title>Make your own</title>
@@ -61,8 +74,27 @@ const MakeYourOwn = () => {
                 <li className="elementos_menu_direito" onClick={make.togglemenu3}>Line</li>
                 <div id="third_menu_hidden">
                   <div id="main" style={{height: '70px', width: '100%'}}>
-                    <input type="button" id="btAdd" defaultValue="Add Line" className="bt" onClick={make.conta}/>
-                    <input type="button" id="btRemove" defaultValue="Remove Line" className="bt" /><br /><br />
+                    <Button 
+                      variant="contained" 
+                      color="primary" 
+                      id="btAdd" 
+                      defaultValue="Add Line" 
+                      onClick={make.conta}
+                    >
+                      Add Line
+                    </Button>
+
+                    <Button 
+                      variant="contained" 
+                      color="secondary"
+                      id="btRemove" 
+                      defaultValue="Remove Line" 
+                      style={{ marginLeft : 15 }}
+                    >
+                      Remove Line
+                    </Button>
+                    <br /><br />
+                    
                     <p>Bar <select id="bar_color_change" onChange = {make.valores}>
                         <option value={0} >1 </option> 
                         <option value={1}>2</option>
@@ -206,6 +238,7 @@ const MakeYourOwn = () => {
         </div>
       </div>
     </div>
+    </MuiThemeProvider>
     );
 }
 
