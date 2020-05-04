@@ -6,18 +6,8 @@ import './makeyo';
 import { bar_type } from './mikrosjs';
 import Button from '@material-ui/core/Button';
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import { createMuiTheme } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
+import Slider from '@material-ui/core/Slider';
 
-
-const theme = createMuiTheme({
-  palette: {
-    primary: red,
-    secondary: {
-      main: '#f44336',
-    },
-  },
-});
 
 const MakeYourOwn = () => {
     return (
@@ -95,7 +85,7 @@ const MakeYourOwn = () => {
                     </Button>
                     <br /><br />
                     
-                    <p>Bar <select id="bar_color_change" onChange = {make.valores}>
+                    <p>Bar <select id="bar_color_change" className="select_bar" onChange = {make.valores}>
                         <option value={0} >1 </option> 
                         <option value={1}>2</option>
                         <option value={2}>3</option>
@@ -103,11 +93,14 @@ const MakeYourOwn = () => {
                         <option value={4}>5</option>
                         <option value={5}>6</option>
                         <option value={6}>7</option>
-                      </select> Color <input style={{marginLeft: '10px'}} className="jscolor {onFineChange:'barcolor(this)'}" defaultValue="fff" /> </p><br /><br />
+                      </select> Color <input style={{marginLeft: '15px'}} className="jscolor {onFineChange:'barcolor(this)'}" defaultValue="fff" /> </p><br /><br />
+
                       <div id="third_menu_hidden_1" > 
                         <p>Bar Type <select id="bar_type"  onChange= {() => make.bartype()}><option value="currentsteps">Current Steps </option><option value="yesterdaysteps">Yesterday Steps </option><option value="companionsteps">Companion Steps </option><option value="pasthouractivaty">Past Hour Activaty </option><option value="goalactivaty">Goal Activaty </option> </select></p><br /><br />
-                        <p>Circle Bar Size </p> <input id= "barsize" defaultValue="100" max="89" onChange={() => make.barsize()} type="range" name="b_size"/><br/>
-                        <p>Circle Bar Radius </p><input id="barradius"  defaultValue="100" max="87" min="50" onChange={() => make.barradius() }type="range" name="b_size"/><br />
+                        
+                        <p>Circle Bar Size </p> <input id= "barsize" className="slider" defaultValue="100" max="89" onChange={() => make.barsize()} type="range" name="b_size"/><br/>
+                        <p>Circle Bar Radius </p><input id="barradius" className="slider" defaultValue="100" max="87" min="50" onChange={() => make.barradius() }type="range" name="b_size"/><br />
+
                         <p>Bar Star </p> <select id="bar_star" onChange={() => make.barstar()} ><option value="tophalf">Top Half</option><option value="full">Full</option><option value="bottomhalf">Bottom Half</option></select><br/><br/>
                         <p>Bar Rotation </p> <select name="bar_rotation" id="bar_star_1" onChange={() => make.updaterotation()} ><option value="clockwise">Clockwise</option><option value="counterclockwise">Counterclockwise</option></select><br />
                       </div>
@@ -129,7 +122,7 @@ const MakeYourOwn = () => {
 
                     <div id="result"></div>
                     <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script>
-                    <input type="text" id="url" placeholder="Url" style={{marginRight: "10px"}} />
+                    <input type="text" id="url" placeholder="Url" style={{marginRight: "10px", marginBottom: "10px"}} />
                     <select id="load_type" style={{marginRight: '10px'}} onChange = {make.escolha} >
                       <option value="url_load" selected="selected">URL</option>
                       <option value="pc">Your Computer</option>
@@ -140,25 +133,45 @@ const MakeYourOwn = () => {
                       <option value="top">Top</option>
                       <option value="bakground">Background</option>
                     </select>
-                    <input type="button" id="btAddImg" defaultValue="Add Image" style={{marginRight: '10px'}} className="bt" />
-                    <input type="button" style={{marginTop: '10px'}} className="bt" defaultValue="Remove Image" id="btRemImg" />
+
+                    <Button 
+                      variant="contained" 
+                      color="primary" 
+                      id="btAddImg" 
+                      defaultValue="Add Image" 
+                      style={{marginRight: '10px', marginTop: "10px"}}
+                      className="bt"
+                    >
+                      Add Image
+                    </Button>
+                    <Button 
+                      variant="contained" 
+                      color="secondary" 
+                      id="btRemImg" 
+                      defaultValue="Remove Image" 
+                      style={{marginRight: '10px', marginTop: "10px"}}
+                      className="bt"
+                    >
+                      Remove Image
+                    </Button>
+
                     <br /><br /><p>Text</p><br />
-                    <select id="first_variable">
+                    <select id="first_variable" style={{marginBottom: "10px"}}>
                       <option value="none">None</option>
                       <option value="yesterday">Yesterday</option>
                       <option value="today">Today</option>
                       <option value="goal">Goal</option>
                       <option value="other_user">Other User</option>
                     </select>
-                    <textarea style={{backgroundColor: 'rgb(225,225,225,0)', zIndex: 8, resize: 'none', textAlign: 'justify', color: 'white'}} id="second_variable" name="field5" className="tex_box" placeholder="Insert your text" rows={1} cols={18} defaultValue={""} />
-                    <select id="third_variable">
+                    <textarea style={{backgroundColor: 'rgb(225,225,225,0)', zIndex: 8, resize: 'none', textAlign: 'justify', color: 'white', marginLeft: "10px"}} id="second_variable" name="field5" className="tex_box" placeholder="Insert your text" rows={1} cols={18} defaultValue={""} />
+                    <select id="third_variable" style={{marginBottom: "10px"}}>
                       <option value="none">None</option>
                       <option value="yesterday">Yesterday</option>
                       <option value="today">Today</option>
                       <option value="goal">Goal</option>
                       <option value="other_user">Other User</option>
                     </select>
-                    <textarea style={{backgroundColor: 'rgb(225,225,225,0)', zIndex: 8, resize: 'none', textAlign: 'justify', color: 'white'}} id="fourth_variable" name="field7" className="tex_box" placeholder="Insert your text" rows={1} cols={18} defaultValue={""} />
+                    <textarea style={{backgroundColor: 'rgb(225,225,225,0)', zIndex: 8, resize: 'none', textAlign: 'justify', color: 'white', marginLeft: "10px"}} id="fourth_variable" name="field7" className="tex_box" placeholder="Insert your text" rows={1} cols={18} defaultValue={""} />
                     <select id="fifth_variable">
                       <option value="none">None</option>
                       <option value="yesterday">Yesterday</option>
@@ -171,8 +184,28 @@ const MakeYourOwn = () => {
                       <option value="temporaria">Temporaria</option>
                     </select> <br />
                     <br />
-                    <input type="button" id="btAddText" defaultValue="Add Fixed Text" className="bt" />
-                    <input type="button" id="btRemoveText" defaultValue="Remove Fixed Text" className="bt" /><br /><br />
+                    <Button 
+                      variant="contained" 
+                      color="primary" 
+                      id="btAddText" 
+                      defaultValue="Add Fixed Text" 
+                      style={{marginRight: '10px', marginTop: "10px"}}
+                      className="bt"
+                    >
+                      Add Fixed Text
+                    </Button>
+                    <Button 
+                      variant="contained" 
+                      color="secondary" 
+                      id="btRemoveText"
+                      defaultValue="Remove Fixed Text" 
+                      style={{marginRight: '10px', marginTop: "10px"}}
+                      className="bt"
+                    >
+                      Remove Fixed Text
+                    </Button>
+                    
+                    <br /><br />
                   </div>
                 </div>
               

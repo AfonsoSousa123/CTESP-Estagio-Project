@@ -110,7 +110,24 @@ input[type=text], select {
     padding: 0 15px;
     line-height: 45px;
     font-size: 15px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
     box-sizing: border-box;
+}
+
+input[type=text], select:hover {    
+  color: rgb(46, 45, 45);
+  background-color: rgb(218, 216, 216);
+}
+
+.slider {
+  -webkit-appearance: slider-horizontal;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: initial;
+    border: initial;
+    margin: 2px;
 }
 
 #root {
@@ -1195,9 +1212,9 @@ input[type=text], select {
 
 /* select_bar */
 
-.select_bar {
-  color: white;
-}
+// .select_bar {
+//   color: white;
+// }
 
 /* select_bar */
 
