@@ -6,8 +6,7 @@ import './makeyo';
 import { bar_type } from './mikrosjs';
 import Button from '@material-ui/core/Button';
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import Slider from '@material-ui/core/Slider';
-
+import TextField from '@material-ui/core/TextField';
 
 const MakeYourOwn = () => {
     return (
@@ -122,7 +121,7 @@ const MakeYourOwn = () => {
 
                     <div id="result"></div>
                     <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script>
-                    <input type="text" id="url" placeholder="Url" style={{marginRight: "10px", marginBottom: "10px"}} />
+                    <TextField id="outlined-basic" variant="outlined" id="url" placeholder="Url" style={{marginRight: "10px", marginBottom: "10px"}}/>
                     <select id="load_type" style={{marginRight: '10px'}} onChange = {make.escolha} >
                       <option value="url_load" selected="selected">URL</option>
                       <option value="pc">Your Computer</option>
@@ -163,7 +162,9 @@ const MakeYourOwn = () => {
                       <option value="goal">Goal</option>
                       <option value="other_user">Other User</option>
                     </select>
-                    <textarea style={{backgroundColor: 'rgb(225,225,225,0)', zIndex: 8, resize: 'none', textAlign: 'justify', color: 'white', marginLeft: "10px"}} id="second_variable" name="field5" className="tex_box" placeholder="Insert your text" rows={1} cols={18} defaultValue={""} />
+                
+                    <TextField style={{ zIndex: 8, resize: 'none', marginLeft: "10px"}} id="second_variable" placeholder="Insert your text" variant="outlined" color="primary" className="tex_box" name="field5" />
+                    
                     <select id="third_variable" style={{marginBottom: "10px"}}>
                       <option value="none">None</option>
                       <option value="yesterday">Yesterday</option>
@@ -171,13 +172,16 @@ const MakeYourOwn = () => {
                       <option value="goal">Goal</option>
                       <option value="other_user">Other User</option>
                     </select>
-                    <textarea style={{backgroundColor: 'rgb(225,225,225,0)', zIndex: 8, resize: 'none', textAlign: 'justify', color: 'white', marginLeft: "10px"}} id="fourth_variable" name="field7" className="tex_box" placeholder="Insert your text" rows={1} cols={18} defaultValue={""} />
+
+                    <TextField style={{ zIndex: 8, resize: 'none', marginLeft: "10px"}} id="fourth_variable" placeholder="Insert your text" variant="outlined" color="primary" className="tex_box" name="field7" />
+
                     <select id="fifth_variable">
                       <option value="none">None</option>
                       <option value="yesterday">Yesterday</option>
                       <option value="today">Today</option>
                       <option value="goal">Daily Goal</option>
                       <option value="other_user">Other User</option>
+
                     </select> <br /><br />
                     <select id="mesage_type">
                       <option value="fixa">Fixa</option>
