@@ -49,3 +49,34 @@ code {
   color: #09bb12;
   font-weight: bold;
 }
+
+.imagem_fundo{
+  padding-top:  35px;
+}
+
+.watch {
+  /* width: 100%;
+  height: 100%; */
+  margin: 0 auto;
+  
+  /* background-repeat:no-repeat;
+  background-position: center; */
+}
+
+/*circle*/
+.center_circule{
+  top: 50%;
+  left: 308px;
+  margin-left: -265px;
+  margin-top: 174px;
+  width: 530px;
+  height: 530px;
+  border-radius: 100%;
+  background-color: #000;
+  position: absolute;
+}
+#rect{
+  width: 100%;
+  height: 100%;
+}
+/*circle*/
