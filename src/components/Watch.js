@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import motorola from './img/motorola.png';
+import motorola from '../img/motorola.png';
 
 const Content = styled.div`
     width: 40%;
@@ -11,10 +11,9 @@ const Content = styled.div`
     margin-left: -75px;
     position: absolute;
     z-index: -1;
-    background-image: url(./img/backgroundwatch.jpg);
 `;
 
-export class Watch extends Component {
+class Watch extends Component {
     render() {
         return (
             <>
@@ -30,3 +29,5 @@ export class Watch extends Component {
         )
     }
 }
+
+export default Watch

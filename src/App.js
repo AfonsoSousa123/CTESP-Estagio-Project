@@ -1,66 +1,26 @@
 import React from "react";
-import HomeIcon from "@material-ui/icons/Home";
-import ReceiptIcon from "@material-ui/icons/Receipt";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
-import SettingsIcon from "@material-ui/icons/Settings";
-import Sidebar from "./Sidebar";
-import {Navigation} from "./Navigation.js"
-import {Watch} from "./Watch.js"
 
-function onClick(e, item) {
-  window.alert("click " + item.name);
-}
+// Imported Components
+import {Navigation} from "./components/Navigation.js"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const items = [
-  { name: "home", label: "Home", Icon: HomeIcon },
-  {
-    name: "billing",
-    label: "Billing",
-    Icon: ReceiptIcon,
-    items: [
-      { name: "statements", label: "Statements", onClick },
-      { name: "reports", label: "Reports", onClick }
-    ]
-  },
-  "divider",
-  {
-    name: "settings",
-    label: "Settings",
-    Icon: SettingsIcon,
-    items: [
-      { name: "profile", label: "Profile" },
-      { name: "insurance", label: "Insurance", onClick },
-      "divider",
-      {
-        name: "notifications",
-        label: "Notifications",
-        Icon: NotificationsIcon,
-        items: [
-          { name: "email", label: "Email", onClick },
-          {
-            name: "desktop",
-            label: "Desktop",
-            Icon: DesktopWindowsIcon,
-            items: [
-              { name: "schedule", label: "Schedule" },
-              { name: "frequency", label: "Frequency" }
-            ]
-          },
-          { name: "sms", label: "SMS" }
-        ]
-      }
-    ]
-  }
-];
+// Imported Pages
+import Home from "./Home";
+import MakeYourOwn from "./MakeYourOwn";
+import Predefine from './Predefine'
 
 function App() {
   return (
-    <div>
-      <Navigation></Navigation>
-      <Watch></Watch>
-      <Sidebar items={items} />
-    </div>
+    <Router>
+      <div>
+        <Navigation></Navigation>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/makeyourown" component={MakeYourOwn}/>
+          <Route path="/predefine" component={Predefine}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
