@@ -31,8 +31,12 @@ const items = [
     label: "Watch Colors",
     Icon: SettingsIcon,
     items: [
-      { name: "profile", label: "Profile" },
-      { name: "insurance", label: "Insurance", onClick },
+      { name: "backgroundColors", label: "Background Colors" },
+      { name: "digital", label: "Digital" },
+      { name: "analogHours", label: "Analog Hours" },
+      { name: "analogMinutes", label: "Analog Minutes" },
+      { name: "analogSeconds", label: "Analog Seconds" },
+      { name: "centerDot", label: "Center Dot", onClick },
       "divider",
       {
         name: "notifications",

@@ -7,7 +7,6 @@ export class Navigation extends Component {
         return (
             <>
                 <Navbar bg="dark" variant="dark">
-                    
                     <Nav className="mr-auto">
                         <NavLink className="nav-link" to='/'>
                             Home

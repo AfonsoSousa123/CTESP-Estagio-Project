@@ -1,10 +1,17 @@
 import React from "react";
+
+// Imported Icons
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+
+// Imported Components
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import Collapse from "@material-ui/core/Collapse";
+import Slider from '@material-ui/core/Slider';
+import TextField from '@material-ui/core/TextField';
+
 
 function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
   const [collapsed, setCollapsed] = React.useState(true);
@@ -55,6 +62,7 @@ function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
         </div>
         {expandIcon}
       </ListItem>
+      
       <Collapse in={!collapsed} timeout="auto" unmountOnExit>
         {Array.isArray(items) ? (
           <List disablePadding dense>
