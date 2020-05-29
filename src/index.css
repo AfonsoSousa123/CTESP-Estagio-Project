@@ -84,11 +84,16 @@ code {
 .input-color {
   width: auto;
   height: 30px;
-
 }
 
-.container {
-  background-color: rgb(48, 46, 46);
-  color: aliceblue;
-  height: 100%;
+.digital-watch {
+  color: white;
+  position: absolute;
+  font-size: 40px;
+  top: 229px;
+  margin-left: 204px;
+}
+
+div.digital-watch span {
+  padding: 5px;
 }

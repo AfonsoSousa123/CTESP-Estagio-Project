@@ -10,6 +10,9 @@ import ReceiptIcon from "@material-ui/icons/Receipt";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
 import SettingsIcon from "@material-ui/icons/Settings";
+import WatchIcon from '@material-ui/icons/Watch';
+import WatchLaterIcon from '@material-ui/icons/WatchLater';
+import TimerIcon from '@material-ui/icons/Timer';
 
 function onClick(e, item) {
   window.alert("click " + item.name);
@@ -19,50 +22,31 @@ const items = [
   {
     name: "billing",
     label: "Watch Types",
-    Icon: ReceiptIcon,
+    Icon: WatchLaterIcon,
     items: [
-      { name: "statements", label: "Statements", onClick },
-      { name: "reports", label: "Reports", onClick }
+      { name: "digital", label: "Digital", onClick },
+      { name: "analog", label: "Analog", onClick }
     ]
   },
   "divider",
   {
     name: "settings",
     label: "Watch Colors",
-    Icon: SettingsIcon,
+    Icon: WatchIcon,
     items: [
       { name: "backgroundColors", label: "Background Colors" },
-      { name: "digital", label: "Digital" },
-      { name: "analogHours", label: "Analog Hours" },
-      { name: "analogMinutes", label: "Analog Minutes" },
-      { name: "analogSeconds", label: "Analog Seconds" },
+      { name: "digital", label: "Digital", onClick },
+      { name: "analogHours", label: "Analog Hours", onClick },
+      { name: "analogMinutes", label: "Analog Minutes", onClick },
+      { name: "analogSeconds", label: "Analog Seconds", onClick },
       { name: "centerDot", label: "Center Dot", onClick },
-      "divider",
-      {
-        name: "notifications",
-        label: "Notifications",
-        Icon: NotificationsIcon,
-        items: [
-          { name: "email", label: "Email", onClick },
-          {
-            name: "desktop",
-            label: "Desktop",
-            Icon: DesktopWindowsIcon,
-            items: [
-              { name: "schedule", label: "Schedule" },
-              { name: "frequency", label: "Frequency" }
-            ]
-          },
-          { name: "sms", label: "SMS" }
-        ]
-      }
     ]
   },
   "divider",
   {
     name: "billing",
     label: "Line",
-    Icon: ReceiptIcon,
+    Icon: TimerIcon,
     items: [
       { name: "statements", label: "Statements", onClick },
       { name: "reports", label: "Reports", onClick }
@@ -72,7 +56,7 @@ const items = [
   {
     name: "settings",
     label: "Atributes",
-    Icon: HomeIcon,
+    Icon: SettingsIcon,
     items: [
       { name: "profile", label: "Profile" },
       { name: "insurance", label: "Insurance", onClick },

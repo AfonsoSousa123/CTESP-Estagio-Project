@@ -14,6 +14,11 @@ const Content = styled.div`
     z-index: -1;
 `;
 
+const styles = styled.div`
+    color: white;
+    padding: 5px;
+`;
+
 class Watch extends Component {
     render() {
         return (
@@ -26,8 +31,11 @@ class Watch extends Component {
                                 <svg height="70" width="200">
                                     <text x="0" y="15" ></text>
                                 </svg>
-                                <span id="hour_1"></span>
-                                <span id="minute_1"></span>
+                                <div className="digital-watch">
+                                    <span id="hour_1">10</span>
+                                    <span >:</span>
+                                    <span id="minute_1">40</span>
+                                </div>
                             </div>
                         </div>
                     </div>
