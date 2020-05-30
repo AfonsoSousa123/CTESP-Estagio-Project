@@ -44,7 +44,7 @@ const items = [
   },
   "divider",
   {
-    name: "billing",
+    name: "line",
     label: "Line",
     Icon: TimerIcon,
     items: [
@@ -91,4 +91,3 @@ export default function MakeYourOwn() {
     </div>
   )
 }
-

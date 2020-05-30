@@ -1,8 +1,8 @@
-import $ from'jquery';
-import 'jquery-ui-dist/jquery-ui';
+//import $ from'jquery';
+//import 'jquery-ui-dist/jquery-ui';
 
 /*Relogio Digital*/
-$(function clock(){
+function clock(){
   setInterval( () => {
   const fullDate = new Date();
   var hours = fullDate.getHours();
@@ -14,9 +14,9 @@ $(function clock(){
     minutes = "0" + minutes;
   }
   if(window.location.pathname === '/makeyourown'){
-    document.getElementById('hour').innerHTML = hours;
-    document.getElementById('minute').innerHTML = ": " + minutes;
-    document.getElementById('hour_1').innerHTML = hours;
-    document.getElementById('minute_1').innerHTML = ": " + minutes;
+    document.getElementById('hours').innerHTML = hours;
+    document.getElementById('minutes').innerHTML = ": " + minutes;
   }
-},100);})
+},100);}
+
+clock();
