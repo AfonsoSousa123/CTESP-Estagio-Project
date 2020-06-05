@@ -13,8 +13,6 @@ export default function Home() {
     <Container maxWidth="lg">
       <div>
         Home page
-        <br/>
-        agwuydgawgdugawgduag
       </div>
     </Container>
   )

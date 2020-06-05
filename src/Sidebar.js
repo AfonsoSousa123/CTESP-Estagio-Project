@@ -2,108 +2,95 @@ import React from "react";
 
 // Imported Icons
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import SettingsIcon from "@material-ui/icons/Settings";
+import WatchIcon from '@material-ui/icons/Watch';
+import WatchLaterIcon from '@material-ui/icons/WatchLater';
+import TimerIcon from '@material-ui/icons/Timer';
 
 // Imported Components
-import List from "@material-ui/core/List";
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
 import Collapse from "@material-ui/core/Collapse";
 import Slider from "@material-ui/core/Slider";
 import TextField from "@material-ui/core/TextField";
+import Button from '@material-ui/core/Button';
 
-function SidebarItem({ depthStep = 10, depth = 0, expanded, item, ...rest }) {
-  const [collapsed, setCollapsed] = React.useState(true);
-  const { label, items, Icon, onClick: onClickProp } = item;
+function Sidebar() {
+  const [expanded, setExpanded] = React.useState(false);
 
-  function toggleCollapse() {
-    setCollapsed((prevValue) => !prevValue);
-  }
-
-  function onClick(e) {
-    if (Array.isArray(items)) {
-      toggleCollapse();
-    }
-    if (onClickProp) {
-      onClickProp(e, item);
-    }
-  }
-
-  let expandIcon;
-
-  if (Array.isArray(items) && items.length) {
-    expandIcon = !collapsed ? (
-      <ExpandLessIcon
-        className={
-          "sidebar-item-expand-arrow" + " sidebar-item-expand-arrow-expanded"
-        }
-      />
-    ) : (
-      <ExpandMoreIcon className="sidebar-item-expand-arrow" />
-    );
-  }
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
-    <>
-      <ListItem
-        className="sidebar-item"
-        onClick={onClick}
-        button
-        dense
-        {...rest}
-      >
-        <div
-          style={{ paddingLeft: depth * depthStep }}
-          className="sidebar-item-content"
+    <div className="sidebar">
+      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
         >
-          {Icon && <Icon className="sidebar-item-icon" fontSize="small" />}
-          <div className="sidebar-item-text">{label}</div>
-        </div>
-        {expandIcon}
-      </ListItem>
-
-      <Collapse in={!collapsed} timeout="auto" unmountOnExit>
-        {Array.isArray(items) ? (
-          <List disablePadding dense>
-            {items.map((subItem, index) => (
-              <React.Fragment key={`${subItem.name}${index}`}>
-                {subItem === "divider" ? (
-                  <Divider style={{ margin: "6px 0" }} />
-                ) : (
-                  <SidebarItem
-                    depth={depth + 1}
-                    depthStep={depthStep}
-                    item={subItem}
-                  />
-                )}
-              </React.Fragment>
-            ))}
-          </List>
-        ) : null}
-      </Collapse>
-    </>
-  );
-}
-
-function Sidebar({ items, depthStep, depth, expanded }) {
-  return (
-    <div className="sidebar" id="sidebar">
-      <List disablePadding dense>
-        {items.map((sidebarItem, index) => (
-          <React.Fragment key={`${sidebarItem.name}${index}`}>
-            {sidebarItem === "divider" ? (
-              <Divider style={{ margin: "6px 0" }} />
-            ) : (
-              <SidebarItem
-                depthStep={depthStep}
-                depth={depth}
-                expanded={expanded}
-                item={sidebarItem}
-              />
-            )}
-          </React.Fragment>
-        ))}
-      </List>
+          <ListItem className="sidebar-header">
+            <WatchLaterIcon className="sidebar-item-icon" /> 
+            Watch Types
+          </ListItem>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Button>Digital</Button>
+          <Button>Analog</Button>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2bh-content"
+          id="panel2bh-header"
+        >
+          <ListItem className="sidebar-header">
+            <WatchIcon className="sidebar-item-icon" />
+            Watch Colors
+          </ListItem>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <div className="sidebar-item-content">
+            <p className="sidebar-item">Background Colors</p>
+            <input className="color-input" type="color" name="background color" id=""/>
+          </div>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3bh-content"
+          id="panel3bh-header"
+        >
+          <ListItem className="sidebar-header">
+            <TimerIcon className="sidebar-item-icon" />
+            Line
+          </ListItem>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4bh-content"
+          id="panel4bh-header"
+        >
+          <ListItem className="sidebar-header">
+            <SettingsIcon className="sidebar-item-icon" />
+            Atributes
+          </ListItem>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
     </div>
   );
 }

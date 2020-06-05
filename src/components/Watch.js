@@ -15,11 +15,6 @@ const Content = styled.div`
     z-index: -1;
 `;
 
-const styles = styled.div`
-    color: white;
-    padding: 5px;
-`;
-
 class Watch extends Component {
     render() {
         return (

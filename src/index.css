@@ -16,12 +16,20 @@ code {
   max-width: 300px;
   height: 98vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f7f3f3;
 }
 
 .sidebar-item {
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.sidebar-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: dimgrey;
 }
 
 .sidebar-item-content {
@@ -34,7 +42,7 @@ code {
 }
 
 .sidebar-item-icon {
-  margin-right: 6px;
+  margin-right: 10px;
 }
 
 .sidebar-item-text {
@@ -50,17 +58,19 @@ code {
   font-weight: bold;
 }
 
+.color-input {
+  width: 70px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
 .imagem_fundo{
   padding-top:  35px;
 }
 
 .watch {
-  /* width: 100%;
-  height: 100%; */
   margin: 0 auto;
-  
-  /* background-repeat:no-repeat;
-  background-position: center; */
 }
 
 /*circle*/
