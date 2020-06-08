@@ -58,6 +58,21 @@ function Sidebar() {
           <div className="sidebar-item-content">
             <p className="sidebar-item">Background Colors</p>
             <input className="color-input" type="color" name="background color" id=""/>
+            
+            <p className="sidebar-item">Digital</p>
+            <input className="color-input" type="color" name="background color" id=""/>
+            
+            <p className="sidebar-item">Analog Hours</p>
+            <input className="color-input" type="color" name="background color" id=""/>
+
+            <p className="sidebar-item">Analog Minutes</p>
+            <input className="color-input" type="color" name="background color" id=""/>
+
+            <p className="sidebar-item">Analog Seconds</p>
+            <input className="color-input" type="color" name="background color" id=""/>
+
+            <p className="sidebar-item">Center Dot</p>
+            <input className="color-input" type="color" name="background color" id=""/>
           </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>
