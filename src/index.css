@@ -13,7 +13,7 @@ code {
 }
 
 .sidebar {
-  max-width: 300px;
+  max-width: 320px;
   height: 98vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f7f3f3;
@@ -22,7 +22,7 @@ code {
 .sidebar-item {
   font-size: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -62,7 +62,6 @@ code {
   width: 70px;
   border-radius: 5px;
   margin-left: auto;
-  margin-bottom: 10px;
 }
 
 .imagem_fundo{
@@ -106,4 +105,9 @@ code {
 
 div.digital-watch span {
   padding: 5px;
+}
+
+/* Buttons */
+.add-btn {
+  margin-right: 5% !important;
 }
