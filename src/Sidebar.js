@@ -20,6 +20,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
+import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 
 function Sidebar() {
@@ -138,24 +139,105 @@ function Sidebar() {
                 <Button variant="contained" color="secondary">Remove Line</Button>
               </Grid>
             </Grid>
-          
+            <br/>
             <Grid container spacing={3}>
-              <Grid item xs={6}>
-                <InputLabel id="demo-simple-select-filled-label">Line</InputLabel>
-                <Select
-                  labelId="demo-simple-select-filled-label"
-                  id="demo-simple-select-filled"
-                  
-                >
-                  <MenuItem value={1}>1</MenuItem>
-                  <MenuItem value={2}>2</MenuItem>
-                  <MenuItem value={3}>3</MenuItem>
-                </Select>
+              <Grid justify="center" item xs={6}>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel id="demo-simple-select-filled-label">Bar</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                    
+                  >
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={1}>1</MenuItem>
+                    {/* <MenuItem value={2}>2</MenuItem>
+                    <MenuItem value={3}>3</MenuItem> */}
+                  </Select>
+                </FormControl>
               </Grid>
-              <Grid item xs={6}>
+              <Grid justify="center" item xs={6}>
+                <InputLabel>Color</InputLabel>
                 <input type="color" className="color-input" name="lineColor" id=""/>
               </Grid>
             </Grid>
+            <br/>
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <h5 className="sidebar-item">Bar 1 Settings</h5>
+                <br/>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel>Steps Type</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                  >
+                    <MenuItem default value={1}>Current Steps</MenuItem>
+                    <MenuItem value={2}>Yesterday Steps</MenuItem>
+                    <MenuItem value={3}>Companion Steps</MenuItem>
+                    <MenuItem value={4}>Past Hour Activity</MenuItem>
+                    <MenuItem value={5}>Goal Activity</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <FormControl variant="filled" fullWidth>
+                  <p className="sidebar-item">Circle Bar 1 Size</p>
+                  <Slider defaultValue={100} aria-labelledby="continuous-slider" /> 
+                </FormControl>
+              </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <FormControl variant="filled" fullWidth>
+                  <p className="sidebar-item">Circle Bar 1 Radius</p>
+                  <Slider defaultValue={100} aria-labelledby="continuous-slider" /> 
+                </FormControl>
+              </Grid>
+            </Grid>
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <h5 className="sidebar-item">Bar 1 Start</h5>
+                <br/>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel>Start Type</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                  >
+                    <MenuItem value={1}>Top Half</MenuItem>
+                    <MenuItem value={2}>Full</MenuItem>
+                    <MenuItem value={3}>Bottom Half</MenuItem>
+                    
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <h5 className="sidebar-item">Bar 1 Rotation</h5>
+                <br/>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel>Rotation Type</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                  >
+                    <MenuItem value={1}>Clockwise</MenuItem>
+                    <MenuItem value={2}>Counterclockwise</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+            <br/>
           </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -171,7 +253,58 @@ function Sidebar() {
           </ListItem>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          
+          <div className="sidebar-item-content">
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <h5 className="sidebar-item">Image</h5>
+                <br/>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel>URL</InputLabel>
+                  <TextField 
+                    variant="filled"
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                  >
+                  </TextField>
+                </FormControl>
+              </Grid>
+            </Grid>
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel>Image Type</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                  >
+                    <MenuItem value={1}>Top</MenuItem>
+                    <MenuItem value={2}>Background</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+            {/* Image Buttons */}
+            <Grid justify="center" container spacing={3}>
+              <Grid justify="center" item xs={5}>
+                <Button variant="contained" color="primary">Add Image</Button>
+              </Grid>
+              <Grid justify="center" item xs={7}>  
+                <Button variant="contained" color="secondary">Remove Image</Button>
+              </Grid>
+            </Grid>
+            {/* Image Buttons */}
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <h5 className="sidebar-item">Text</h5>
+                <br/>
+                <FormControl variant="filled" fullWidth>
+                  
+                </FormControl>
+              </Grid>
+            </Grid>
+          </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>
