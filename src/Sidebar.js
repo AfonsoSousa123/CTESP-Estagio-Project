@@ -259,11 +259,11 @@ function Sidebar() {
                 <h5 className="sidebar-item">Image</h5>
                 <br/>
                 <FormControl variant="filled" fullWidth>
-                  <InputLabel>URL</InputLabel>
                   <TextField 
                     variant="filled"
                     labelId="demo-simple-select-filled-label"
                     id="demo-simple-select-filled"
+                    placeholder="URL"
                   >
                   </TextField>
                 </FormControl>
@@ -300,10 +300,43 @@ function Sidebar() {
                 <h5 className="sidebar-item">Text</h5>
                 <br/>
                 <FormControl variant="filled" fullWidth>
-                  
+                  <TextField 
+                    variant="filled"
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                    placeholder="Insert your text here"
+                  >
+                  </TextField>
                 </FormControl>
               </Grid>
             </Grid>
+            <br/>
+            <Grid container spacing={3}>
+              <Grid justify="center" item xs={12}>
+                <FormControl variant="filled" fullWidth>
+                  <InputLabel>Text Type</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-filled-label"
+                    id="demo-simple-select-filled"
+                  >
+                    <MenuItem value={1}>Fixed</MenuItem>
+                    <MenuItem value={2}>Tepmorary</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+            </Grid>
+            <br/>
+            {/* Text Buttons */}
+            <Grid justify="center" container spacing={3}>
+              <Grid justify="center" item xs={5}>
+                <Button variant="contained" color="primary">Add Text</Button>
+              </Grid>
+              <Grid justify="center" item xs={7}>  
+                <Button variant="contained" color="secondary">Remove Text</Button>
+              </Grid>
+            </Grid>
+            {/* Text Buttons */}
+            <br/>
           </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>
