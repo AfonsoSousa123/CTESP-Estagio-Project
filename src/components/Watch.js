@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import motorola from '../img/motorola.png';
 import "./watchSetings";
 
-
 const Content = styled.div`
     width: 40%;
     height: 150px;
