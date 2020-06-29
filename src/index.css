@@ -122,3 +122,7 @@ div.digital-watch span {
   width: 120px;
   height: 65px;
 }
+
+.home-img {
+  background-image: url(/src/img/background1.jpg);
+}

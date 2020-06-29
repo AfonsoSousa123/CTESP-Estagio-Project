@@ -1,19 +1,18 @@
 import React from 'react'
-// import styled from 'styled-components';
+import styled from 'styled-components';
+import bg from './img/background1.jpg';
 import Container from '@material-ui/core/Container';
 
-// const Content = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   z-index: -1;
-// `;
+// const bgHome = {
+//   width: "100%",
+//   height: "100%",
+//   backgroundImage: `url(${bg})`
+// }
 
 export default function Home() {
   return (
-    <Container maxWidth="lg">
-      <div>
-        Home page
-      </div>
-    </Container>
+    <div>
+      <img src={bg} className="home-img"/>
+    </div>
   )
 }
