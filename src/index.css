@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -72,6 +72,7 @@ code {
 
 .watch {
   margin: 0 auto;
+  margin-top: 7px;
 }
 
 /*circle*/
@@ -79,7 +80,7 @@ code {
   top: 50%;
   left: 308px;
   margin-left: -265px;
-  margin-top: 174px;
+  margin-top: 180px;
   width: 530px;
   height: 530px;
   border-radius: 100%;
@@ -100,9 +101,9 @@ code {
 .digital-watch {
   color: white;
   position: absolute;
-  font-size: 40px;
-  top: 229px;
-  margin-left: 204px;
+  font-size: 3em;
+  top: 225px;
+  margin-left: 190px;
 }
 
 div.digital-watch span {
@@ -123,6 +124,92 @@ div.digital-watch span {
   height: 65px;
 }
 
-.home-img {
-  background-image: url(/src/img/background1.jpg);
+.home-bg {
+  background-image: url("img/background1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.home-intro {
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.home-intro h2 {
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home-intro p {
+  margin: 60px 0 80px;
+  line-height: 30px;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.home-intro .video-container {
+  text-align: center;
+}
+
+.home-intro .video-container iframe {
+  width: 60%;
+  height: 500px;
+}
+
+footer {
+  padding: 40px 0 !important;
+  background-color: #343a40;
+}
+
+footer .wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+footer .footer-nav {
+  float: left;
+  width: 50%;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left;
+}
+
+footer .footer-nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+footer .footer-nav li:last-child {
+  margin-right: 0px;
+}
+
+footer .footer-nav li a {
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  transition: all .2s ease-in-out;
+}
+
+footer .footer-nav li a:hover {
+  transform: scale(2) !important;
+}
+
+footer .madeby {
+  float: right;
+  width: 50%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer .madeby p {
+  margin-bottom: 0 !important;
+  color: white;
+  font-size: 1em;
+  text-align: right;
 }
