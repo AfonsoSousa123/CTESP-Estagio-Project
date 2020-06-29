@@ -1,7 +1,8 @@
 import React from "react";
 
 // Imported Components
-import {Navigation} from "./components/Navigation.js"
+import {Navigation} from "./components/Navigation.js";
+import {Footer} from "./components/Footer.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Imported Pages
@@ -19,6 +20,7 @@ function App() {
           <Route path="/makeyourown" component={MakeYourOwn}/>
           <Route path="/predefine" component={Predefine}/>
         </Switch>
+        <Footer></Footer>
       </div>
     </Router>
   );

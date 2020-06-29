@@ -39,4 +39,4 @@ class Watch extends Component {
     }
 }
 
-export default Watch
+export default Watch;
