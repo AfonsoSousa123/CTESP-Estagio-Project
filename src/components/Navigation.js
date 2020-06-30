@@ -10,7 +10,7 @@ export class Navigation extends Component {
       <div>
         <Navbar bg="dark" variant="dark">
           <div class="container">
-            <Nav className="ml-auto">
+            <Nav>
               <NavLink className="nav-link" to="/">
                 Home
               </NavLink>
@@ -21,33 +21,17 @@ export class Navigation extends Component {
                 Predefine
               </NavLink>
             </Nav>
+
+            <Nav>
+              <NavLink className="nav-link" to="/signin">
+                Sign In
+              </NavLink>
+              <NavLink className="nav-link" to="/signup">
+                Sign Up
+              </NavLink>
+            </Nav>
           </div>
         </Navbar>
-
-        {/* <Navbar
-          alignLinks="right"
-          brand={
-            <a className="brand-logo" href="#">
-              Logo
-            </a>
-          }
-          id="mobile-nav"
-          menuIcon={<Icon>menu</Icon>}
-          options={{
-            draggable: true,
-            edge: "left",
-            inDuration: 250,
-            onCloseEnd: null,
-            onCloseStart: null,
-            onOpenEnd: null,
-            onOpenStart: null,
-            outDuration: 200,
-            preventScrolling: true,
-          }}
-        >
-          <NavItem href="#">Getting started</NavItem>
-          <NavItem href="components.html">Components</NavItem>
-        </Navbar> */}
       </div>
     );
   }
