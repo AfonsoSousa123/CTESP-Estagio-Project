@@ -14,7 +14,7 @@ const Container = styled.div`
   top: ${props => props.top}px;
   right: 16px;
   z-index: 999;
-  transition: top 0.3s ease;
+  transition: top 0.2s ease;
 `;
 
 const emitter = new ee();
