@@ -42,7 +42,7 @@ function Sidebar() {
           </ListItem>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Grid justify="center" container spacing={3}>
+          <Grid justify="center" container spacing={3} className="sidebar-center">
             <Grid justify="center" item xs={6}>
               <Button>Digital</Button>
             </Grid>
