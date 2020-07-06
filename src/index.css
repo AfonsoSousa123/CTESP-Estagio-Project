@@ -126,10 +126,14 @@ div.digital-watch span {
 }
 
 .download-button {
-  top: 30px;
+  top: 7px;
   z-index: 1 !important;
   width: 200px;
   height: 70px;
+}
+
+.download-icon {
+  margin-left: 5px;
 }
 
 .home-bg {
@@ -222,11 +226,11 @@ footer .madeby p {
   text-align: right;
 }
 
-.predefined-profiles {
+.predefine-profiles {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
-  height: 500px;
+  height: 550px;
   justify-content: center;
   margin-bottom: 45%;
   margin-top: 20%;
@@ -234,5 +238,5 @@ footer .madeby p {
 
 .predefine-img {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
