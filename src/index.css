@@ -14,14 +14,14 @@ code {
 
 .sidebar {
   max-width: 320px;
-  height: 98vh;
+  height: 95vh;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f7f3f3;
   overflow: auto;
 }
 
 .sidebar-item {
-  font-size: 20px;
+  font-size: 1.1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,6 +226,11 @@ footer .madeby p {
   text-align: right;
 }
 
+footer .madeby-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .predefine-profiles {
   display: flex;
   flex-wrap: wrap;
@@ -239,4 +244,12 @@ footer .madeby p {
 .predefine-img {
   width: 300px;
   height: 400px;
+}
+
+.sidebar-center {
+  text-align: center;
+}
+
+.MuiButton-label {
+  font-weight: bold;
 }

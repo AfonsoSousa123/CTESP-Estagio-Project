@@ -27,10 +27,10 @@ export class Footer extends Component {
                             </Navbar>
                         </Grid>
                         
-                        <Grid item xs={6}>
+                        <Grid item xs={6} className="madeby-wrapper">
                             <div className="container">
                                 <ul className="madeby">
-                                    <p>Made By</p>
+                                    <p>Made By João Afonso & João Marques</p>
                                 </ul>
                             </div>
                         </Grid>
